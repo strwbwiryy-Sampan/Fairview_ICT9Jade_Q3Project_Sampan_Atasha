@@ -25,7 +25,7 @@
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
 
-    <a class="navbar-brand"><img src="https://cdn.corenexis.com/view/3899164168" alt="Image" class="rounded-circle" style="height: 40px;"></a>
+    <a class="navbar-brand"><img src="Whatlll.png" alt="Image" class="rounded-circle" style="height: 40px;"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
 
       <span class="navbar-toggler-icon"></span>
@@ -34,10 +34,10 @@
     <div class="collapse navbar-collapse" id="mynavbar">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="https://strwbwiryy-sampan.github.io/Fairview_ICT9Jade_Q3Project_Sampan_Atasha/">Home</a>
+          <a class="nav-link" href="https://bananaman4262arada.github.io/Homesy/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Isee">Calculator</a>
+          <a class="nav-link" href="https://bananaman4262arada.github.io/calc/">Calculator</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://strwbwiryy-sampan.github.io/registration_Q3/">Log In</a>
@@ -47,14 +47,23 @@
     </nav>  
 
     <div class="d-flex justify-content-center align-items-center min-vh-100" style=background-color:#d2ebf9;>
-    <article class="p-4 shadow rounded text-center " style="max-width:500px; background-color: #43abff; font-family: Helvetica;">
-        <h1>RateRunner</h1>
-        <p>The Number One Fare Guide</p>
+    <article class="p-4 shadow rounded text-center float" style="max-width:500px; background-color: #43abff; font-family: Helvetica;">
+        <h1>Calculator</h1>
+
+    <form onsubmit="hans(event)">
+      <label for="quantity">Kilometers to travel:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="9000">
+      <input type="submit" value="Submit">
+    </form>
+
+    <p id="result"></p>
+
+    <br>
 
     <details ontoggle="message1()">
-        <summary><u>Instructions</u></summary>
-        <br>
-        <i id="message"></i>
+      <summary><u>Instructions</u></summary>
+      <br>
+      <i id="message"></i>
     </details>
     </article>
     </div>
@@ -62,13 +71,22 @@
     </main>
 
     <footer class="mt-auto">
-            <p>Arada, Sampan, Oquendo | 9-Jade</p>
+      <p>Arada, Sampan, Oquendo | 9-Jade</p>
     </footer>
 
     <script>
     function message1() {
-        document.getElementById("message").innerHTML = "Click on 'Calculator' in the top left to calculate your fare cost.";
-    }
+      document.getElementById("message").innerHTML = "Enter how many kilometers you need to take to reach your destination.";
+      }
+
+    function hans(event) {
+      event.preventDefault();
+      let x = Number(document.getElementById("quantity").value);
+      let Pay = x * 8.07;
+      let fourty = 40;
+      let finalPrice = Pay + fourty;
+      document.getElementById("result").innerHTML = finalPrice;
+      }
     </script>
 
 
